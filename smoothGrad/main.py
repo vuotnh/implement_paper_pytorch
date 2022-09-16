@@ -9,11 +9,8 @@ from image_utils import preprocess_image, save_as_gray_image
 from labels import IMAGENET_LABELS
 
 
-
-
-
 def main():
-    image_path = "./data/0000802.jpg"
+    image_path = "adv.jpg"
     img = cv2.imread(image_path)
     img = np.float32(cv2.resize(img, (224, 224))) / 255
     preprocessed_image = preprocess_image(img) 
